@@ -25,7 +25,7 @@ export default class {
   }
 
   render(t, y) {
-    if (this.quad) this.quad.render(t * this.params.time, this.mouse);
+    if (this.quad) this.quad.render(t, this.mouse);
   }
 
   resize(gl) {
@@ -46,6 +46,7 @@ export default class {
     ];
 
     this.params = {
+      test: wrapper.hasAttribute("data-test"),
       // shader
       multx: parseFloat(wrapper.dataset.multx) || 0.2,
       multy: parseFloat(wrapper.dataset.multy) || 0.8,
