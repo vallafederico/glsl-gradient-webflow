@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "name": "twgl-bp-v0",
-  "description": ""
+  "description": "",
+  "scripts": {
+    "dev": "parcel index.html"
+  }
 }

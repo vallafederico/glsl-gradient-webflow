@@ -60,5 +60,7 @@ export default class {
       // javascript
       time: parseFloat(wrapper.dataset.time) || 1
     };
+
+    // console.log(this.params);
   }
 }
