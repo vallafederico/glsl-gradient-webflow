@@ -33,6 +33,8 @@ export default class {
     this.post = new Post(this.gl);
     this.post.isActive = false;
     this.scene = new Scene(this.gl);
+
+    window.dispatchEvent(new Event("gradientReady"));
   }
 
   render() {

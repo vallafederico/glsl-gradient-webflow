@@ -8,6 +8,7 @@ varying vec2 v_xy;
 uniform vec4 u_params;
 uniform vec4 u_params2;
 uniform vec3 u_color;
+uniform float u_mode;
 
 const float MPI = 6.28318530718;
 
@@ -181,11 +182,15 @@ void main() {
 
   float bw_col = (col.r + col.g + col.b) * .3;
   col = mix(col, vec3(bw_col), BW);
-  
+
+  // col.r = u_mode - col.r;
+
+  if (u_mode > .5) {
+    col = vec3(1.) - col;
+  }
 
 
-
-  gl_FragColor.rgb = col;
+  gl_FragColor.rgb =  col;
   gl_FragColor.a = 1.;
 }
   

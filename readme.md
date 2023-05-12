@@ -20,3 +20,12 @@ All the interesting stuffs are happening in the code embed, here you only need t
 | data-noise="1.5"        | noise deformation                         | 0/3              |
 | data-time=".2"          | time remapping                            | .1/3             |
 | data-bw=".0"            | black and white                           | 0/1              |
+
+## WIndow
+
+The Plugin is exposed to the window via `window.Gradient`, the interface is in `window.Gradient.call`
+
+| Function       | Definition                                      | Parameters                    |
+| -------------- | ----------------------------------------------- | ----------------------------- |
+| mode()         | Allows for togglign between light and dark mode | ...                           |
+| mode({PARAMS}) | Specify the mode you want                       | `string` `"light"` / `"dark"` |

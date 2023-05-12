@@ -15,9 +15,13 @@ export default class {
     this.data = data;
     this.shaders = shaders;
     this.programInfo = createProgramInfo(this.gl, this.shaders);
-    console.log(this.data);
+    // console.log(this.data);
 
     if (this.data.test) this.initGui();
+
+    this.a = {
+      mode: 0
+    };
 
     this.gl.useProgram(this.programInfo.program);
     this.setBuffAtt();
@@ -37,7 +41,8 @@ export default class {
       u_time: 0,
       u_params: [this.data.multx, this.data.multy, this.data.hue, this.data.brightness],
       u_params2: [this.data.mouse, this.data.scale, this.data.noise, this.data.bw],
-      u_color: this.data.color
+      u_color: this.data.color,
+      u_mode: this.a.mode
     };
 
     this.gl.useProgram(this.programInfo.program);
@@ -49,7 +54,8 @@ export default class {
     setBuffersAndAttributes(this.gl, this.programInfo, this.bufferInfo);
     setUniforms(this.programInfo, {
       u_time: t * this.data.time,
-      u_mouse: [x, y]
+      u_mouse: [x, y],
+      u_mode: this.a.mode
     });
 
     drawBufferInfo(this.gl, this.bufferInfo);
@@ -116,5 +122,22 @@ export default class {
       })
       .listen();
     this.gui.add(this.data, "time", 0, 1);
+  }
+
+  mode(mode) {
+    if (mode === "light") {
+      this.a.mode = 1;
+    } else if (mode === "dark") {
+      this.a.mode = 0;
+    } else {
+      if (this.a.mode === 0) {
+        this.a.mode = 1;
+      } else {
+        this.a.mode = 0;
+      }
+    }
+
+    console.log(mode, this.uniforms.u_mode);
+    this.setUniforms();
   }
 }

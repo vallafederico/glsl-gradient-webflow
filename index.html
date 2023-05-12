@@ -25,9 +25,21 @@
       data-red="0.00"
       data-green="0.33"
       data-blue="0.88"
+      data-callback="true"
     ></canvas>
     <script src="src/app.js" type="module"></script>
   </body>
+
+  <script>
+    window.addEventListener("gradientReady", () => {
+      console.log("ready! in window");
+
+      document.addEventListener("click", () => {
+        console.log(window.app);
+        // window.gradient.invert();
+      });
+    });
+  </script>
 </html>
 
 <!--
