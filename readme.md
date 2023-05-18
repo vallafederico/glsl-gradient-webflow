@@ -27,6 +27,12 @@ All the interesting stuffs are happening in the code embed, here you only need t
 | data-noise="1.5"        | noise deformation                         | 0/3              |
 | data-time=".2"          | time remapping                            | .1/3             |
 | data-bw=".0"            | black and white                           | 0/1              |
+| data-red=".0"           | Red Value                                 | --               |
+| data-green=".0"         | Green Value                               | --               |
+| data-blue=".0"          | Blue Value                                | --               |
+| data-red2=".0"          | Red Value for Swap Function               | --               |
+| data-green2=".0"        | Green Value for Swap Function             | --               |
+| data-blue2=".0"         | Blue Value for Swap Function              | --               |
 
 ## WIndow
 
