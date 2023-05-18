@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  gsap:
+    specifier: ^3.11.5
+    version: 3.11.5
   lil-gui:
     specifier: ^0.18.1
     version: 0.18.1
@@ -275,6 +278,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /gsap@3.11.5:
+    resolution: {integrity: sha512-Q89nKCLgoX5xUjznh9LcaIUkz54k1voNucT1Rpf9SJNFIQznBwFqt5qUUQbeVInFyN/n18OUJkpeI6CNEDt74w==}
+    dev: false
 
   /lil-gui@0.18.1:
     resolution: {integrity: sha512-nsDJLflFGro81hcGqaiDNBEKgkMKNF9okmMmW3Xc6sPXP1zyfD3oIftyctvBQD2iTIUgWDw6CuME1IQZD+OvLw==}

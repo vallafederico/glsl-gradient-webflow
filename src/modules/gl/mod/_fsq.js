@@ -8,6 +8,7 @@ import {
 import GUI from "lil-gui";
 
 import shaders from "../mat/fsq";
+import Tween from "gsap";
 
 export default class {
   constructor(gl, data = {}) {
@@ -20,7 +21,8 @@ export default class {
     if (this.data.test) this.initGui();
 
     this.a = {
-      mode: 0
+      mode: 0,
+      swap: 0
     };
 
     this.gl.useProgram(this.programInfo.program);
@@ -42,7 +44,9 @@ export default class {
       u_params: [this.data.multx, this.data.multy, this.data.hue, this.data.brightness],
       u_params2: [this.data.mouse, this.data.scale, this.data.noise, this.data.bw],
       u_color: this.data.color,
-      u_mode: this.a.mode
+      u_color2: this.data.color2,
+      u_mode: this.a.mode,
+      u_swap: this.a.swap
     };
 
     this.gl.useProgram(this.programInfo.program);
@@ -55,7 +59,8 @@ export default class {
     setUniforms(this.programInfo, {
       u_time: t * this.data.time,
       u_mouse: [x, y],
-      u_mode: this.a.mode
+      u_mode: this.a.mode,
+      u_swap: this.a.swap
     });
 
     drawBufferInfo(this.gl, this.bufferInfo);
@@ -136,6 +141,30 @@ export default class {
         this.a.mode = 0;
       }
     }
+
+    console.log(mode, this.uniforms.u_mode);
+    this.setUniforms();
+  }
+
+  swap(mode, { d }) {
+    let target = 0;
+
+    if (mode === 0) {
+      target = 0;
+    } else if (mode === 1) {
+      target = 1;
+    } else {
+      if (this.a.swap === 0) {
+        target = 1;
+      } else {
+        target = 0;
+      }
+    }
+
+    Tween.to(this.a, {
+      swap: target,
+      duration: d
+    });
 
     console.log(mode, this.uniforms.u_mode);
     this.setUniforms();

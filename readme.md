@@ -25,7 +25,8 @@ All the interesting stuffs are happening in the code embed, here you only need t
 
 The Plugin is exposed to the window via `window.Gradient`, the interface is in `window.Gradient.call`
 
-| Function       | Definition                                      | Parameters                    |
-| -------------- | ----------------------------------------------- | ----------------------------- |
-| mode()         | Allows for togglign between light and dark mode | ...                           |
-| mode({PARAMS}) | Specify the mode you want                       | `string` `"light"` / `"dark"` |
+| Function               | Definition                                      | Parameters                                     |
+| ---------------------- | ----------------------------------------------- | ---------------------------------------------- |
+| mode()                 | Allows for togglign between light and dark mode | ...                                            |
+| mode({PARAMS})         | Specify the mode you want                       | `string` `"light"` / `"dark"`                  |
+| swap({MODE}, {PARAMS}) | Specify the mode you want                       | `float` `0` / `1` , `object` `{d: {DURATION}}` |

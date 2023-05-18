@@ -13,6 +13,7 @@
     "vite-plugin-glsl": "^1.1.2"
   },
   "dependencies": {
+    "gsap": "^3.11.5",
     "lil-gui": "^0.18.1",
     "twgl.js": "^5.3.1"
   }

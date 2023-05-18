@@ -8,7 +8,10 @@ varying vec2 v_xy;
 uniform vec4 u_params;
 uniform vec4 u_params2;
 uniform vec3 u_color;
+uniform vec3 u_color2;
+
 uniform float u_mode;
+uniform float u_swap;
 
 const float MPI = 6.28318530718;
 
@@ -155,9 +158,10 @@ void main() {
   scale_uv += vec2(.5);
 
   // # COMPUTE
+  vec3 current_color = mix(u_color, u_color2, u_swap);
   vec3 col = palette(
     u_time + cos((m_uv.x) + (m_uv.y)), 
-    col1, col2, col2, u_color
+    col1, col2, col2, current_color
   );
 
   // mouse 

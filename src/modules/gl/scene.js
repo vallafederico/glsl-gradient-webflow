@@ -45,6 +45,12 @@ export default class {
       parseFloat(wrapper.dataset.blue) || 0.66
     ];
 
+    const color2 = [
+      parseFloat(wrapper.dataset.red2) || 0,
+      parseFloat(wrapper.dataset.green2) || 0,
+      parseFloat(wrapper.dataset.blue2) || 0
+    ];
+
     this.params = {
       test: wrapper.hasAttribute("data-test"),
       // shader
@@ -56,6 +62,7 @@ export default class {
       scale: parseFloat(wrapper.dataset.scale) || 0.2,
       noise: parseFloat(wrapper.dataset.noise) || 1,
       color: color,
+      color2: color2,
       bw: parseFloat(wrapper.dataset.bw) || 0,
       // javascript
       time: parseFloat(wrapper.dataset.time) || 1
