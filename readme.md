@@ -3,6 +3,13 @@
 All the interesting stuffs are happening in the code embed, here you only need to import the code.
 
 [Live Link](https://webgl-glsl-gradient.webflow.io/) | [Cloneable](#)
+[Dev](https://webflow.com/design/webgl-glsl-gradient)
+
+### Last version script
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/vallafederico/glsl-gradient-webflow@master/dist/gradient.01.js"></script>
+```
 
 ## How to control
 
@@ -25,8 +32,8 @@ All the interesting stuffs are happening in the code embed, here you only need t
 
 The Plugin is exposed to the window via `window.Gradient`, the interface is in `window.Gradient.call`
 
-| Function               | Definition                                      | Parameters                                     |
-| ---------------------- | ----------------------------------------------- | ---------------------------------------------- |
-| mode()                 | Allows for togglign between light and dark mode | ...                                            |
-| mode({PARAMS})         | Specify the mode you want                       | `string` `"light"` / `"dark"`                  |
-| swap({MODE}, {PARAMS}) | Specify the mode you want                       | `float` `0` / `1` , `object` `{d: {DURATION}}` |
+| Function               | Definition                                                                               | Parameters                                              |
+| ---------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| mode()                 | Allows for togglign between light and dark mode                                          | ...                                                     |
+| mode({PARAMS})         | Specify the mode you want                                                                | `string` `"light"` / `"dark"`                           |
+| swap({MODE}, {PARAMS}) | Swaps for alternative params. If not specificed uses the one that's not currently active | `float` `0` / `1` / `null` , `object` `{d: {DURATION}}` |
