@@ -8,7 +8,7 @@ All the interesting stuffs are happening in the code embed, here you only need t
 ### Last version script
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/vallafederico/glsl-gradient-webflow@master/lib/gradient.01.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/vallafederico/glsl-gradient-webflow@master/lib/gradient.02.js"></script>
 ```
 
 ## How to control
@@ -24,9 +24,11 @@ All the interesting stuffs are happening in the code embed, here you only need t
 | data-brightness=".8"    | overall brightness                        | 0/1              |
 | data-mouse="-1"         | mouse influece                            | -1/1             |
 | data-scale="1"          | uv scale (zoom)                           | .5/3             |
+| data-scale2="1"         | uv scale (zoom) for Swap Function         | .5/3             |
 | data-noise="1.5"        | noise deformation                         | 0/3              |
 | data-time=".2"          | time remapping                            | .1/3             |
 | data-bw=".0"            | black and white                           | 0/1              |
+| data-bw2=".0"           | black and white for Swap Function         | 0/1              |
 | data-red=".0"           | Red Value                                 | --               |
 | data-green=".0"         | Green Value                               | --               |
 | data-blue=".0"          | Blue Value                                | --               |

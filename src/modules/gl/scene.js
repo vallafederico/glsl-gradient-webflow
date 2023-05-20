@@ -60,10 +60,12 @@ export default class {
       brightness: parseFloat(wrapper.dataset.brightness) || 0.8,
       mouse: parseFloat(wrapper.dataset.mouse) || 1,
       scale: parseFloat(wrapper.dataset.scale) || 0.2,
+      scale2: parseFloat(wrapper.dataset.scale2) || 0.2,
       noise: parseFloat(wrapper.dataset.noise) || 1,
       color: color,
       color2: color2,
       bw: parseFloat(wrapper.dataset.bw) || 0,
+      bw2: parseFloat(wrapper.dataset.bw2) || 0,
       // javascript
       time: parseFloat(wrapper.dataset.time) || 1
     };

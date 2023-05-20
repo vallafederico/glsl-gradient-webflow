@@ -7,6 +7,8 @@ varying vec2 v_xy;
 
 uniform vec4 u_params;
 uniform vec4 u_params2;
+uniform vec4 u_altparams;
+
 uniform vec3 u_color;
 uniform vec3 u_color2;
 
@@ -136,9 +138,10 @@ void main() {
  float HUE = u_params.z; // 0 / 360
  float BRIGHTNESS = u_params.w;
  float MOUSE_BRIGHTNESS = u_params2.x; // -1 / 1 -- -1 being black and 100% power
- float SCALE = u_params2.y;
+ float SCALE = mix(u_params2.y, u_altparams.x, u_swap);
  float NOISE_FACTOR = u_params2.z;
- float BW = u_params2.w;
+ float BW = mix(u_params2.w, u_altparams.y, u_swap);
+ 
 
   // shader
   vec2 uv = gl_FragCoord.xy / u_res;

@@ -43,6 +43,7 @@ export default class {
       u_time: 0,
       u_params: [this.data.multx, this.data.multy, this.data.hue, this.data.brightness],
       u_params2: [this.data.mouse, this.data.scale, this.data.noise, this.data.bw],
+      u_altparams: [this.data.scale2, this.data.bw2, 0, 0],
       u_color: this.data.color,
       u_color2: this.data.color2,
       u_mode: this.a.mode,
