@@ -22,6 +22,6 @@ window.Gradient = new App();
 /** Interface */
 // console.log(window.Gradient.call.mode("light"));
 
-document.onclick = () => {
-  window.Gradient.call.swap(null, { d: 1.2 });
-};
+// document.onclick = () => {
+//   window.Gradient.call.swap(null, { d: 1.2 });
+// };
