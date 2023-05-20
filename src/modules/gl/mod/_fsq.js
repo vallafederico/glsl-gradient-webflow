@@ -166,7 +166,7 @@ export default class {
       duration: d
     });
 
-    console.log(mode, this.uniforms.u_mode);
+    // console.log(mode, this.uniforms.u_mode);
     this.setUniforms();
   }
 }

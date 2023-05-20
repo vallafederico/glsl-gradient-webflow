@@ -8,7 +8,7 @@ All the interesting stuffs are happening in the code embed, here you only need t
 ### Last version script
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/vallafederico/glsl-gradient-webflow@master/dist/gradient.01.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/vallafederico/glsl-gradient-webflow@master/lib/gradient.01.js"></script>
 ```
 
 ## How to control
